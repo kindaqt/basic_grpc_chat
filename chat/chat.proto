@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package chat;
+
+option go_package = "example.com/go-chat-grpc;go_chat_grpc";
+
+service Chat {
+	rpc Login(Connection) returns (stream Message) {};
+	rpc Logout(User) returns (Close) {};
+	rpc SendMessage(Message) returns (Close) {};
+}
+
+message User {
+	string id = 1;
+	string userName = 2;
+}
+
+message Message {
+	string id = 1;
+	User user = 2;
+	string message = 3;
+	string timestamp = 4;
+}
+
+message Connection {
+	User user = 1;
+	bool active = 2;
+}
+
+message Close {}
