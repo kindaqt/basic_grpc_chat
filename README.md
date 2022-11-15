@@ -8,7 +8,7 @@
 go run chat_server/chat_server.go
 ```
 
-## 2. Start Client
+### 2. Start Client
 
 Start client with the command below. Start a bunch and chat with yourself!
 
