@@ -18,7 +18,7 @@ go run chat_client/chat_client.go -name YOUR_USERNAME -address SERVER_ADDRESS
 
 *NOTE: the `-name` and `-address` flags are optional.*
 
-### Regenerate proto
+## Regenerate proto
 
 - **--go_out**: out dir of first protobuf file
 - **--go-opt**: generate files relative to source (source being the first protobuf file)
